@@ -1,0 +1,7 @@
+{
+	"token": "bot.token.here",
+
+	"clientID": "bot-id-here",
+
+	"guildID": "server-id-here-for-deploy-commands"
+}

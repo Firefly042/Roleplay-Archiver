@@ -1,0 +1,23 @@
+{
+  "name": "archiver-bot",
+  "version": "1.0.0",
+  "description": "Archives selected categories and channels of a discord server",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodejs deploy-commands.js",
+    "start": "nodejs index.js"
+  },
+  "author": "@Firefly#7113",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "archiver": "^5.3.0",
+    "axios": "^0.25.0",
+    "discord-api-types": "^0.26.1",
+    "discord-markdown": "^2.5.1",
+    "discord.js": "^13.6.0",
+    "jimp": "^0.16.1",
+    "node-cron": "^3.0.0"
+  }
+}
