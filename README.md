@@ -18,7 +18,7 @@ This was tested in Firefox, Chrome, and Edge. Firefox has slightly better perfor
 * Share your instance of this bot code with friends in a private manner.
 
 
-## What You Cannot Do
+## What You Cannot Do (What I'd Prefer You Not Do)
 * Profit off of this code or any bot that runs it.
 * Publicly advertise your instance of this bot code as a service.
 
