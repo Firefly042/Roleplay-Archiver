@@ -101,12 +101,13 @@ client.on("interactionCreate", async (interaction) => {
 		{
 			// Skip to full confirmation
 			replyRows = [utils.makeConfirmationButtonRow("final")];
-			replyContent = "Make archive with the above categories? This cannot be adjusted for 24 hours."
+			replyContent = "Make archive with the above categories?";
 		}
 		// Too many
 		else if (channels.size > 100)
 		{
-			replyContent = "ERROR: I cannot display more than 100 channels! You may choose more full categories to fix this.";
+			replyContent = "WARNING: I cannot display more than 100 channels! You may choose more full categories to fix this, or continue without adding additional channels.";
+			replyRows = [utils.makeConfirmationButtonRow("final")];
 		}
 		else
 		{

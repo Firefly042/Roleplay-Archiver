@@ -351,7 +351,14 @@ async function archiveChannels(channels, category, guild)
 															discordCallback: {
 																everyone: node => "@everyone",
 																here: node => "@here",
-																user: node => `@${guildMembers.get(node.id).displayName}`,
+																user: node => {
+																	var name = guildMembers.get(node.id).displayName;
+																	if (name)
+																	{
+																		name = guildMembers.get(node.id).username;
+																	}
+																	return `@${name}`;
+																},
 																role: node => `@${guildRoles.get(node.id).name}`,
 																channel: node => `#${guildChannels.get(node.id).name}`
 															}

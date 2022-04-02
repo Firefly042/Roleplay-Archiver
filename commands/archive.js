@@ -53,7 +53,7 @@ module.exports = {
 
 
 		await interaction.reply({
-			content: "Choose categories. If adjusting any selections, be sure to click outside menu for reply to update!", 
+			content: "Choose categories to be included in your archive. If adjusting any selections, be sure to click outside menu for the bot to update!", 
 			components: replyRows, 
 			ephemeral: true
 		});
