@@ -1,20 +1,15 @@
 *Last updated: 02 Apr, 2022*
 
-## How to Use the Bot
-* This bot is intended for use **after your game has concluded**. It does *not* log in real time.
-* Archiving image-heavy channels is highly discouraged.
-
-
-## Testing
-This is currently in something of an 'Early Access'. It functions, but there is a lot of room for improvement and it needs to be tested on other operating systems.
-
-
 ## Introduction
-This bot was written mainly for the roleplaying community, intended to be used for logging written content (with the occasional image) across all rp channels. It is not recommended to use it for out-of-character chats or art-heavy channels. It is also not recommended to use it more than necessary due to the number of API requests it needs to make.
+This bot was written mainly for the roleplaying community. It will generate an offline copy of all selected categories and individual channels. 
 
 The bot will generate a folder including some pre-written HTML5. Hosting this directory will recreate the logged channels with editable CSS and JS. All HTML, CSS, and JS files are written by Discord user @Firefly#7113.
 
 This was tested in Firefox, Chrome, and Edge. Firefox has slightly better performance than Chrome, Chrome has slightly better aesthetics. Funnily enough, Edge has the best balance of performance and aesthetics.
+
+
+## Testing
+This is currently in something of an 'Early Access'. It functions, but there is a lot of room for improvement and it needs to be tested on other operating systems.
 
 
 ## What You Can Do
@@ -26,6 +21,10 @@ This was tested in Firefox, Chrome, and Edge. Firefox has slightly better perfor
 * Profit off of this code or any bot that runs it.
 * Publicly advertise your instance of this bot code as a service.
 
+## How to Use the Bot
+* This bot is intended for use **after your game has concluded**. It does *not* log in real time.
+* Archiving image-heavy channels is highly discouraged.
+* Due to the demanding nature of this bot, it is highly encouraged to use this only once your game is completed.
 
 ### Prerequisites
 1. To run the bot, you will need Node.js version 17.4 or higher. You may download it for your operating system [here](https://nodejs.org).
@@ -89,4 +88,4 @@ For security reasons, you'll need to host the files locally (or on some other ho
 
 ## Future Updates
 * Handle reactions maybe.
-* Handle rich embeds maybe.
+* Handle rich embeds.
