@@ -353,7 +353,7 @@ async function archiveChannels(channels, category, guild)
 																here: node => "@here",
 																user: node => {
 																	var name = guildMembers.get(node.id).displayName;
-																	if (name)
+																	if (!name)
 																	{
 																		name = guildMembers.get(node.id).username;
 																	}
