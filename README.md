@@ -1,4 +1,8 @@
-*Last updated: 28 Feb, 2022*
+*Last updated: 02 Apr, 2022*
+
+## How to Use the Bot
+* This bot is intended for use **after your game has concluded**. It does *not* log in real time.
+* Archiving image-heavy channels is highly discouraged.
 
 
 ## Testing
@@ -21,10 +25,6 @@ This was tested in Firefox, Chrome, and Edge. Firefox has slightly better perfor
 ## What You Cannot Do (What I'd Prefer You Not Do)
 * Profit off of this code or any bot that runs it.
 * Publicly advertise your instance of this bot code as a service.
-
-
-## How to Use the Bot
-Due to Discord's upload limits, it is highly encouraged to self-host this bot. In fact, the developer has not made the bot public at all. Self hosting will also allow you to keep full-sized images without compressing them. The vast majority of complete or reasonably complete games will far surpass 8 MB, even with processed images.
 
 
 ### Prerequisites
