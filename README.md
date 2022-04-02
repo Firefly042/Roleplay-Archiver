@@ -8,12 +8,6 @@ The bot will generate a folder including some pre-written HTML5. Hosting this di
 This was tested in Firefox, Chrome, and Edge. Firefox has slightly better performance than Chrome, Chrome has slightly better aesthetics. Funnily enough, Edge has the best balance of performance and aesthetics.
 
 
-## How to Use the Bot
-* This bot is intended for use **after your game has concluded**. It does *not* log in real time.
-* Archiving image-heavy channels is highly discouraged.
-* Due to the demanding nature of this bot, it is highly encouraged to use this only once your game is completed.
-
-
 ## Testing
 This is currently in something of an 'Early Access'. It functions, but there is a lot of room for improvement and it needs to be tested on other operating systems.
 
@@ -27,6 +21,10 @@ This is currently in something of an 'Early Access'. It functions, but there is 
 * Profit off of this code or any bot that runs it.
 * Publicly advertise your instance of this bot code as a service.
 
+## How to Use the Bot
+* This bot is intended for use **after your game has concluded**. It does *not* log in real time.
+* Archiving image-heavy channels is highly discouraged.
+* Due to the demanding nature of this bot, it is highly encouraged to use this only once your game is completed.
 
 ### Prerequisites
 1. To run the bot, you will need Node.js version 17.4 or higher. You may download it for your operating system [here](https://nodejs.org).
