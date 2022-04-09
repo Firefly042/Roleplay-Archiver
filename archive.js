@@ -352,10 +352,18 @@ async function archiveChannels(channels, category, guild)
 																everyone: node => "@everyone",
 																here: node => "@here",
 																user: node => {
-																	var name = guildMembers.get(node.id).displayName;
-																	if (!name)
+																	var name;
+																	try
+																	{ 
+																		name = guildMembers.get(node.id).displayName;
+																	}
+																	catch (error)
 																	{
-																		name = guildMembers.get(node.id).username;
+																		// User left guild
+																		if (error instanceof TypeError)
+																		{
+																			return "@Non-member";
+																		}
 																	}
 																	return `@${name}`;
 																},

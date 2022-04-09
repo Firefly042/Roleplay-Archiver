@@ -19,5 +19,13 @@
     "discord.js": "^13.6.0",
     "jimp": "^0.16.1",
     "node-cron": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Firefly042/Roleplay-Archiver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Firefly042/Roleplay-Archiver/issues"
+  },
+  "homepage": "https://github.com/Firefly042/Roleplay-Archiver#readme"
 }
