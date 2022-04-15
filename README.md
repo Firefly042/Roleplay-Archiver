@@ -100,7 +100,7 @@ For security reasons, you'll need to host the files locally (or on some other ho
 ## Issues and Discrepancies
 * Clearing your browser cache should fix any issues with css not updating or content that doesn't match that in its corresponding `messages.json` file.
 
-** Since this is fully offline, a lot of data gets loaded into your browser, so it is a good idea to clear your cache when you're finished anyway.
+  * Since this is fully offline, a lot of data gets loaded into your browser, so it is a good idea to clear your cache when you're finished anyway.
 
 * Minor formatting discrepancies between original and generated messages.
 
