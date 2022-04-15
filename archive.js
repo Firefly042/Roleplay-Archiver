@@ -309,6 +309,15 @@ async function archiveChannels(channels, category, guild)
 			message = message[1];
 
 			// -------------------------------------------------
+			// Check for webhook (Tupperbox, for example)
+			// -------------------------------------------------
+			var webhookID = message.webhookId;
+			if (webhookID)
+			{
+				currentMessageJSON.isWebhook = true;
+			}
+
+			// -------------------------------------------------
 			// Handle author display name, and color
 			// -------------------------------------------------
 			var author;
@@ -402,7 +411,9 @@ async function archiveChannels(channels, category, guild)
 			await downloadAvatar(message.author, message);
 		}
 
+		// -------------------------------------------------
 		// Write to file
+		// -------------------------------------------------
 		writeMessageJSON(channel, category, messagesJSON);
 
 		console.log(`\tArchived ${channel.name}`);

@@ -113,8 +113,11 @@ For security reasons, you'll need to host the files locally (or on some other ho
 
 * Does not indicate a message that has been replied to.
 
+* Has issues with webhooks such as Tupperbox
+
 
 ## Future Updates
 * Handle reactions maybe.
 * Handle rich embeds.
 * Need to test with Nitro sever pfps.
+* Webook support
