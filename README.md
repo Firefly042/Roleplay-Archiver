@@ -43,12 +43,15 @@ Left is the hosted copy, right is the original content in Discord App
 
 
 ## Linux/Mac/Windows
+### Bot Application Setup
 1. Follow the instructions to create a bot application [here](https://discordjs.guide/preparations/setting-up-a-bot-application.html). You will need the SERVER MEMBERS INTENT and the MESSAGE CONTENT INTENT enabled. 
 ![Bot Intents](./images/bot_intents.PNG)
 
 2. Invite your bot to your server using the link generated in OAuth2 > URL Generator. You must at least check off `bot` and `applications.commands`. Be sure to grant proper permissions to view the message history of any channels you want to log, and if you have archived threads to log, that it can manage threads.
 ![Oauth2 URL](./images/oauth2_url.PNG)
 
+
+### Code Setup
 3. Clone this github repository (or download it and unzip it somewhere).
 
 4. Open a terminal (Command Prompt in Windows) and use `cd path/to/Roleplay-Archiver`
@@ -69,6 +72,8 @@ Left is the hosted copy, right is the original content in Discord App
 9. In your command line, run `npm test` to deploy the commands to the specified server. If this does not work, you may need to adjust the scripts in `package.json` from `nodejs <>` to `node <>`.
 ![Scripts](./images/scripts.png)
 
+
+### Using the Bot
 10. Run `npm start` to log the bot in.
 
 11. In your server, use `/archive` in whichever channel you'd like to work in. Follow the prompts carefully. You will likely see four select boxes here to accomodate all categories. Progress will be displayed in your command line.
