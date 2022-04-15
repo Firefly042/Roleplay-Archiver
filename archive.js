@@ -171,23 +171,16 @@ async function downloadAttachment(attachment, message)
 			{
 				var writer = fs.createWriteStream(fname);
 
-				var res = await axios(attachment.proxyURL, {
+				var req = await axios(user.displayAvatarURL(), {
 					method: 'GET',
 					responseType: 'stream'
 				});
 
-				res.data.pipe(writer);
+				req.data.pipe(writer).on("error", (error) => fs.unlink(fname));
+
+				writer.on('finish', () => writer.close())
 			}
-			catch (error)
-			{
-				// console.log(`Error downloading attachment from ${message.channel.name} - ${attachment.proxyURL}`);
-				// console.error(error);
-				// try 
-				// {
-				// 	fs.unlinkSync(fname);
-				// }
-				// catch {}
-			}
+			catch {}
 		}
 	});
 }
@@ -216,23 +209,16 @@ async function downloadAvatar(user, message)
 			{
 				var writer = fs.createWriteStream(fname);
 
-				var res = await axios(user.displayAvatarURL(), {
+				var req = await axios(user.displayAvatarURL(), {
 					method: 'GET',
 					responseType: 'stream'
 				});
 
-				res.data.pipe(writer);
+				req.data.pipe(writer).on("error", (error) => fs.unlink(fname));
+
+				writer.on('finish', () => writer.close())
 			}
-			catch (error)
-			{
-				// console.log(`Error downloading avatar for ${user.name}`);
-				// console.error(error);
-				// try 
-				// {
-				// 	fs.unlinkSync(fname);
-				// }
-				// catch {}
-			}
+			catch {}
 		}
 	});
 }
@@ -321,6 +307,15 @@ async function archiveChannels(channels, category, guild)
 		{
 			currentMessageJSON = {};
 			message = message[1];
+
+			// -------------------------------------------------
+			// Check for webhook (Tupperbox, for example)
+			// -------------------------------------------------
+			var webhookID = message.webhookId;
+			if (webhookID)
+			{
+				currentMessageJSON.isWebhook = true;
+			}
 
 			// -------------------------------------------------
 			// Handle author display name, and color
@@ -416,7 +411,9 @@ async function archiveChannels(channels, category, guild)
 			await downloadAvatar(message.author, message);
 		}
 
+		// -------------------------------------------------
 		// Write to file
+		// -------------------------------------------------
 		writeMessageJSON(channel, category, messagesJSON);
 
 		console.log(`\tArchived ${channel.name}`);

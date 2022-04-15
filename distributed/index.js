@@ -206,7 +206,8 @@ function displayMessages(messageFileName, channelID)
 			var lastPostAuthor;
 			for (var message of messages)
 			{
-				if (message.author.id != lastPostAuthor || (message.createdTimestamp - lastPostTime)/1000/60 >= 7 || message.hasThread)
+				// Append if webhook, different author, it's been a while since the last post, or if it has a thread
+				if (message.isWebhook || message.author.id != lastPostAuthor || (message.createdTimestamp - lastPostTime)/1000/60 >= 7 || message.hasThread)
 				{
 					messagePanel.appendChild(constructPost(message, channelID, false));
 				}
