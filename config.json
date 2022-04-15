@@ -1,7 +1,7 @@
 {
-	"token": "bot.token.here",
+	"token": "BoT.token.heRe",
 
-	"clientID": "bot-id-here",
+	"clientID": "bot-user-id",
 
-	"guildID": "server-id-here-for-deploy-commands"
+	"guildID": "id-of-server-to-record"
 }

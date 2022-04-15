@@ -61,6 +61,7 @@ client.once("ready", () => {
 // On interaction
 // --------------------------------------------------
 client.on("interactionCreate", async (interaction) => {
+	// In process of selecting categories
 	if (interaction.isSelectMenu() && interaction.customId.includes("category-select"))
 	{
 		var guildID = interaction.guild.id;
@@ -75,6 +76,8 @@ client.on("interactionCreate", async (interaction) => {
 
 		await interaction.deferUpdate();
 	}
+
+	// Confirming category selection, moving to channel selection if possible
 	else if (interaction.isButton() && interaction.customId == "confirm-categories")
 	{
 		// Cache is undefined if no full categories are selected
@@ -123,6 +126,8 @@ client.on("interactionCreate", async (interaction) => {
 			ephemeral: true
 		});
 	}
+
+	// Canceling selections
 	else if (interaction.isButton() && interaction.customId.includes("cancel"))
 	{
 		// clear cache
@@ -133,6 +138,8 @@ client.on("interactionCreate", async (interaction) => {
 			ephemeral: true
 		});
 	}
+
+	// In process of selecting channels
 	else if (interaction.isSelectMenu() && interaction.customId.includes("channel-select"))
 	{
 		var guildID = interaction.guild.id;
@@ -143,6 +150,8 @@ client.on("interactionCreate", async (interaction) => {
 
 		await interaction.deferUpdate();
 	}
+
+	// Confirming channel selections
 	else if (interaction.isButton() && interaction.customId == "confirm-channels")
 	{
 		// Union all arrays in cache. By design they are non-overlapping
@@ -173,6 +182,8 @@ client.on("interactionCreate", async (interaction) => {
 			ephemeral: true
 		});
 	}
+
+	// Final confirmation, begins recording process
 	else if (interaction.isButton() && interaction.customId == "confirm-final")
 	{
 		// Archive
