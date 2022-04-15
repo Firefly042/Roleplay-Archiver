@@ -171,23 +171,16 @@ async function downloadAttachment(attachment, message)
 			{
 				var writer = fs.createWriteStream(fname);
 
-				var res = await axios(attachment.proxyURL, {
+				var req = await axios(user.displayAvatarURL(), {
 					method: 'GET',
 					responseType: 'stream'
 				});
 
-				res.data.pipe(writer);
+				req.data.pipe(writer).on("error", (error) => fs.unlink(fname));
+
+				writer.on('finish', () => writer.close())
 			}
-			catch (error)
-			{
-				// console.log(`Error downloading attachment from ${message.channel.name} - ${attachment.proxyURL}`);
-				// console.error(error);
-				// try 
-				// {
-				// 	fs.unlinkSync(fname);
-				// }
-				// catch {}
-			}
+			catch {}
 		}
 	});
 }
@@ -216,23 +209,16 @@ async function downloadAvatar(user, message)
 			{
 				var writer = fs.createWriteStream(fname);
 
-				var res = await axios(user.displayAvatarURL(), {
+				var req = await axios(user.displayAvatarURL(), {
 					method: 'GET',
 					responseType: 'stream'
 				});
 
-				res.data.pipe(writer);
+				req.data.pipe(writer).on("error", (error) => fs.unlink(fname));
+
+				writer.on('finish', () => writer.close())
 			}
-			catch (error)
-			{
-				// console.log(`Error downloading avatar for ${user.name}`);
-				// console.error(error);
-				// try 
-				// {
-				// 	fs.unlinkSync(fname);
-				// }
-				// catch {}
-			}
+			catch {}
 		}
 	});
 }
