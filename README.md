@@ -13,6 +13,7 @@ This is currently in something of an 'Early Access'. It functions, but there is 
 
 
 ## Preview
+Left is the hosted copy, right is the original content in Discord App
 ![Example](./images/example.png "Left is the hosted copy, right is the original content in Discord App")
 
 
@@ -56,7 +57,7 @@ This is currently in something of an 'Early Access'. It functions, but there is 
 
 6. Run `npm install`, which will install the dependencies listed in `package.json`.
 
-7. In `config.json`, replace the token with the one on your bot's developer page. 
+7. In `config.json`, replace the token with the one on your bot's developer page. Reset it and copy the result
 ![Token Example](./images/token.png "Reset it and copy the result")
 
 8. Enable Developer Mode if you don't have it. This allows you to obtain Discord IDs by right clicking on a user, server, channel etc. Developer Mode can be toggled in Settings > Advanced.
@@ -70,7 +71,7 @@ This is currently in something of an 'Early Access'. It functions, but there is 
 
 10. Run `npm start` to log the bot in.
 
-11. In your server, use `/archive` in whichever channel you'd like to work in. Follow the prompts carefully. There may be multiple selection lists to check. Progress will be displayed in your command line.
+11. In your server, use `/archive` in whichever channel you'd like to work in. Follow the prompts carefully. You will likely see four select boxes here to accomodate all categories. Progress will be displayed in your command line.
 ![Command](./images/command.png "You will likely see four select boxes here to accomodate all categories")
 
 12. The command line will display 'finished' before you receive confirmation on discord. It is recommended to wait a moment or so in case any image files are still downloading.
@@ -98,6 +99,7 @@ For security reasons, you'll need to host the files locally (or on some other ho
 
 ## Issues and Discrepancies
 * Clearing your browser cache should fix any issues with css not updating or content that doesn't match that in its corresponding `messages.json` file.
+
 ** Since this is fully offline, a lot of data gets loaded into your browser, so it is a good idea to clear your cache when you're finished anyway.
 
 * Minor formatting discrepancies between original and generated messages.
